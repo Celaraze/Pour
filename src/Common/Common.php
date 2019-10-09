@@ -1,8 +1,8 @@
 <?php
 
-namespace src;
+namespace Famio\Saber\Common;
 
-class Common
+class Uni
 {
     /**
      * 提取字符串中的数字
