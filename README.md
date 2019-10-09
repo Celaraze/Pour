@@ -4,7 +4,7 @@
 
 一个非常接地气的实用型PHP类库。
 
-#### 安装教程
+#### 安装
 
 ```composer require famio/saber```
 
