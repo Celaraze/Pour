@@ -3,7 +3,7 @@
   "description": "Adding more useful libraries to PHP.",
   "type": "library",
   "license": "MulanPSL1.0",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "authors": [
     {
       "name": "famio",
