@@ -1,0 +1,15 @@
+{
+  "name": "famio/saber",
+  "description": "Adding more useful class libraries to PHP.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "famio",
+      "email": "famio@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.3"
+  }
+}
