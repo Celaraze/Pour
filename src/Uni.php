@@ -1,6 +1,6 @@
 <?php
 
-namespace Famio\Saber\Common;
+namespace Famio\Saber\Facades;
 
 class Uni
 {
@@ -9,7 +9,7 @@ class Uni
      * @param $str
      * @return string
      */
-    static function findNum($str = '')
+    static function findNumFromString($str = '')
     {
         $str = trim($str);
         if (empty($str)) {
@@ -31,7 +31,7 @@ class Uni
      * @param $str
      * @return string
      */
-    static function cut($begin, $end, $str)
+    static function cutString($begin, $end, $str)
     {
         $b = mb_strpos($str, $begin) + mb_strlen($begin);
         $e = mb_strpos($str, $end) - $b;
@@ -57,7 +57,7 @@ class Uni
      * @param $string
      * @return string|string[]|null
      */
-    static function clearTrim($string)
+    static function trim($string)
     {
         $string = preg_replace("/\n/", '', $string);
         $string = preg_replace("/\r/", '', $string);
@@ -72,7 +72,7 @@ class Uni
      * @param $string
      * @return string
      */
-    static function findChinese($string)
+    static function findChineseFromString($string)
     {
         preg_match_all('/[\x{4e00}-\x{9fff}]+/u', $string, $chinese);
         $return = implode('', $chinese[0]);
