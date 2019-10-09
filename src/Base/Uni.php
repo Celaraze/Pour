@@ -6,19 +6,19 @@ class Uni
 {
     /**
      * 提取字符串中的数字
-     * @param $str
+     * @param string $string
      * @return string
      */
-    static function findNumFromString($str = '')
+    static function findNumFromString($string = '')
     {
-        $str = trim($str);
-        if (empty($str)) {
+        $string = trim($string);
+        if (empty($string)) {
             return '';
         }
         $result = '';
-        for ($i = 0; $i < strlen($str); $i++) {
-            if (is_numeric($str[$i])) {
-                $result .= $str[$i];
+        for ($i = 0; $i < strlen($string); $i++) {
+            if (is_numeric($string[$i])) {
+                $result .= $string[$i];
             }
         }
         return $result;
@@ -28,28 +28,28 @@ class Uni
      * 截取指定字符中间的内容
      * @param $begin
      * @param $end
-     * @param $str
+     * @param $string
      * @return string
      */
-    static function cutString($begin, $end, $str)
+    static function cutString($begin, $end, $string)
     {
-        $b = mb_strpos($str, $begin) + mb_strlen($begin);
-        $e = mb_strpos($str, $end) - $b;
+        $b = mb_strpos($string, $begin) + mb_strlen($begin);
+        $e = mb_strpos($string, $end) - $b;
 
-        return mb_substr($str, $b, $e);
+        return mb_substr($string, $b, $e);
     }
 
     /**
      * 给json object string加双引号
-     * @param $str
+     * @param $string
      * @return mixed
      */
-    static function jsonStringify($str)
+    static function jsonStringify($string)
     {
-        if (preg_match('/\w:/', $str)) {
-            $str = preg_replace('/(\w+):/is', '"$1":', $str);
+        if (preg_match('/\w:/', $string)) {
+            $string = preg_replace('/(\w+):/is', '"$1":', $string);
         }
-        return $str;
+        return $string;
     }
 
     /**
