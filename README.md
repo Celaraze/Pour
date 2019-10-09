@@ -43,4 +43,4 @@
 
 #### 开源协议
 
-本项目使用《木兰宽松许可证1.0》
+Saber遵循 [MulanPSL1.0](https://license.coscl.org.cn/MulanPSL/) 开源协议。
