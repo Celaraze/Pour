@@ -1,6 +1,6 @@
 {
   "name": "famio/saber",
-  "description": "Adding more useful class libraries to PHP.",
+  "description": "Adding more useful libraries to PHP.",
   "type": "library",
   "license": "MIT",
   "version": "1.0.0",
