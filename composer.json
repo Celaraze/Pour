@@ -2,8 +2,8 @@
   "name": "famio/saber",
   "description": "Adding more useful libraries to PHP.",
   "type": "library",
-  "license": "MulanPSL1.0",
-  "version": "1.1.0",
+  "license": "MIT",
+  "version": "1.2.0",
   "authors": [
     {
       "name": "famio",
