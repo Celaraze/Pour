@@ -45,4 +45,4 @@
 
 #### 开源协议
 
-Saber遵循 [MulanPSL1.0](https://license.coscl.org.cn/MulanPSL/) 开源协议。
+Saber遵循 MIT 开源协议。
