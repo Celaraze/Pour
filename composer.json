@@ -3,7 +3,7 @@
   "description": "Adding more useful libraries to PHP.",
   "type": "library",
   "license": "MIT",
-  "version": "1.2.0",
+  "version": "dev-master",
   "authors": [
     {
       "name": "famio",
