@@ -90,7 +90,7 @@ class Uni
         $result = array();
         foreach ($arrayA as $a) {
             if (!in_array($a, $arrayB)) {
-                array_push($add_ids, $result);
+                array_push($result, $a);
             }
         }
         $result = array_unique($result);
