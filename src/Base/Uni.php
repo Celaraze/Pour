@@ -9,7 +9,7 @@ class Uni
      * @param string $string
      * @return string
      */
-    static function findNumFromString($string = '')
+    static function getNumFromString($string = '')
     {
         $string = trim($string);
         if (empty($string)) {
@@ -72,11 +72,10 @@ class Uni
      * @param $string
      * @return string
      */
-    static function findChineseFromString($string)
+    static function getChineseFromString($string)
     {
         preg_match_all('/[\x{4e00}-\x{9fff}]+/u', $string, $chinese);
-        $return = implode('', $chinese[0]);
-        return $return;
+        return implode('', $chinese[0]);
     }
 
     /**
@@ -95,5 +94,22 @@ class Uni
         }
         $result = array_unique($result);
         return $result;
+    }
+
+    /**
+     * 生成随机RGB颜色
+     * @param int $stringify
+     * @return mixed
+     */
+    static function randomRGB($stringify = 0)
+    {
+        $r = rand(0, 255);
+        $g = rand(0, 255);
+        $b = rand(0, 255);
+        if ($stringify) {
+            return "$r,$g,$b";
+        } else {
+            return ['r' => $r, 'g' => $g, 'b' => $b];
+        }
     }
 }
