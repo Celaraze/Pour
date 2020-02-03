@@ -98,14 +98,16 @@ class Uni
 
     /**
      * 生成随机RGB颜色
+     * @param $min
+     * @param $max
      * @param int $stringify
      * @return mixed
      */
-    static function randomRGB($stringify = 0)
+    static function randomRGB($min, $max, $stringify = 0)
     {
-        $r = rand(0, 255);
-        $g = rand(0, 255);
-        $b = rand(0, 255);
+        $r = rand($min, $max);
+        $g = rand($min, $max);
+        $b = rand($min, $max);
         if ($stringify) {
             return "$r,$g,$b";
         } else {
