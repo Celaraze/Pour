@@ -114,4 +114,18 @@ class Uni
             return ['r' => $r, 'g' => $g, 'b' => $b];
         }
     }
+
+    /**
+     * 生成随即数字字符串
+     * @param int $length
+     * @return string
+     */
+    static function randomNumberString($length = 6)
+    {
+        $result = '';
+        for ($i = 0; $i < $length; $i++) {
+            $result .= rand(0, 9);
+        }
+        return $result;
+    }
 }
