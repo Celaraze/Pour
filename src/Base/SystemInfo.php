@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Famio\Saber\Facades\Base;
+namespace Carafe\Facades\Base;
 
 
 class SystemInfo
@@ -39,7 +39,7 @@ class SystemInfo
     }
 
     /**
-     * 查看内存使用率
+     * 查看内存使用率 Linux
      * @return string
      */
     static function getUsageOfLinuxMemory()

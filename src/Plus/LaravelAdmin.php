@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Famio\Saber\Facades\Plus;
+namespace Carafe\Facades\Plus;
 
 
 class LaravelAdmin

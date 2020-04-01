@@ -1,6 +1,6 @@
 <?php
 
-namespace Famio\Saber\Facades\Base;
+namespace Carafe\Facades\Base;
 
 class Uni
 {
