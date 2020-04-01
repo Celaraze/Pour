@@ -1,12 +1,12 @@
-# Saber
+# Carafe
 
 #### 介绍
 
-一个非常接地气的实用型PHP类库。都是我在开发过程中经常使用的方法，现独立出来方便自己在多个项目中使用同一套类库，同样也提供给有需要的同学。
+实用型PHP库，包括针对Laravel/Lumen，ORM，GuzzleHttp以及源生PHP7+的扩展支持。在原有的基础上进行增强抽象，更加轻便的封装方式使构建代码更加高效。现独立出来方便自己在多个项目中使用同一套类库，同样也提供给有需要的同学。
 
 #### 安装
 
-```composer require famio/saber```
+```composer require famio/carafe```
 
 #### 说明
 
@@ -45,4 +45,4 @@
 
 #### 开源协议
 
-Saber遵循 MIT 开源协议。
+Carafe 遵循 MIT 开源协议。
