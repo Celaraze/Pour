@@ -1,4 +1,4 @@
-# Carafe
+# Chemex
 
 #### 介绍
 
@@ -45,4 +45,4 @@
 
 #### 开源协议
 
-Carafe 遵循 MIT 开源协议。
+Chemex 遵循 MIT 开源协议。
