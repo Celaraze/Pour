@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Carafe\Facades\Laravel;
+namespace Chemex\Laravel;
 
 
 use Illuminate\Support\Facades\DB;

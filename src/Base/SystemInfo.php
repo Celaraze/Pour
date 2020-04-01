@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Carafe\Facades\Base;
+namespace Chemex\Base;
 
 
 class SystemInfo

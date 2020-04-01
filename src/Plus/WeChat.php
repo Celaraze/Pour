@@ -1,6 +1,6 @@
 <?php
 
-namespace Carafe\Facades\Plus;
+namespace Chemex\Plus;
 
 class WeChat
 {
