@@ -19,19 +19,4 @@ class DateTime
         $s = (strlen($s) == 1) ? '0' . $s : $s;
         return $h . ':' . $s;
     }
-
-    /**
-     * 返回时间戳的当前月份
-     * @param $date
-     * @return false|string
-     */
-    static function dateToCurrentMonth($date)
-    {
-        return date('m', $date);
-    }
-
-    static function dateToCurrentWeek($date)
-    {
-
-    }
 }
