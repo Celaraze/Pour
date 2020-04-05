@@ -4,7 +4,7 @@
 namespace Chemex\Base;
 
 
-class Time
+class DateTime
 {
     /**
      * 秒转换为分
@@ -18,5 +18,20 @@ class Time
         $h = (strlen($h) == 1) ? '0' . $h : $h;
         $s = (strlen($s) == 1) ? '0' . $s : $s;
         return $h . ':' . $s;
+    }
+
+    /**
+     * 返回时间戳的当前月份
+     * @param $date
+     * @return false|string
+     */
+    static function dateToCurrentMonth($date)
+    {
+        return date('m', $date);
+    }
+
+    static function dateToCurrentWeek($date)
+    {
+
     }
 }

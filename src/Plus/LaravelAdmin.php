@@ -23,4 +23,20 @@ class LaravelAdmin
         }
         return $data;
     }
+
+    /**
+     * Eloquent集合转为规范的laravel-admin的listbox组件所需要的数组格式
+     * @param $collection
+     * @param $key
+     * @param $value
+     * @return array
+     */
+    static function collectionToArrayForListBox($collection, $key, $value)
+    {
+        $array = array();
+        for ($i = 0; $i < count($collection); $i++) {
+            $array[$collection[$i][$key]] = $collection[$i][$value];
+        }
+        return $array;
+    }
 }
