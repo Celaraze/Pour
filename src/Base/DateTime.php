@@ -44,14 +44,18 @@ class DateTime
                 $first_day = date("Y-m-01 00:00:00", strtotime($date));
                 $last_day = date("Y-m-d 23:59:59", strtotime("$first_day +1 month -1 day"));
                 break;
-            case 'first-half-of-the-year':
-                $first_day = date("Y-01-01 00:00:00", strtotime($date));
-                $last_day = date("Y-06-30 23:59:59", strtotime($date));
-                break;
             case 'quarter':
                 $season = ceil(date('n', strtotime($date)) / 3);
                 $first_day = date('Y-m-01 00:00:00', mktime(0, 0, 0, ($season - 1) * 3 + 1, 1, date('Y')));
                 $last_day = date('Y-m-t 23:29:29', mktime(0, 0, 0, $season * 3, 1, date('Y')));
+                break;
+            case 'first-half-of-the-year':
+                $first_day = date("Y-01-01 00:00:00", strtotime($date));
+                $last_day = date("Y-06-30 23:59:59", strtotime($date));
+                break;
+            case 'second-half-of-the-year':
+                $first_day = date("Y-07-01 00:00:00", strtotime($date));
+                $last_day = date("Y-12-31 23:59:59", strtotime($date));
                 break;
             case 'year':
                 $first_day = date("Y-01-01 00:00:00", strtotime($date));
