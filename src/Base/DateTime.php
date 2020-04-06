@@ -65,6 +65,9 @@ class DateTime
                 $first_day = date('Y-m-d 00:00:00', strtotime("$shift day"));
                 $last_day = date("Y-m-d 23:59:59", strtotime("$shift day"));
         }
-        return array($first_day, $last_day);
+        return [
+            'first_day' => $first_day,
+            'last_day' => $last_day
+        ];
     }
 }
