@@ -27,7 +27,7 @@ class DateTime
      * @param int $shift
      * @return array
      */
-    public function currentDateTimeRange($date, $type, $shift = 0)
+    static function currentDateTimeRange($date, $type, $shift = 0)
     {
         switch ($type) {
             case 'week':
