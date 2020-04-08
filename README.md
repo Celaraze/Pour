@@ -6,7 +6,7 @@
 
 #### 安装
 
-```composer require famio/carafe```
+```composer require famio/chemex```
 
 #### 说明
 
