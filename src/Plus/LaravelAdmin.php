@@ -39,4 +39,25 @@ class LaravelAdmin
         }
         return $array;
     }
+
+    /**
+     * 返回是/否
+     * @return array
+     */
+    static function yesOrNo()
+    {
+        return [0 => '否', 1 => '是'];
+    }
+
+    /**
+     * 返回switch组件的是/否
+     * @return array
+     */
+    static function switchYesOrNo()
+    {
+        return [
+            'on' => ['value' => 1, 'text' => '是', 'color' => 'primary'],
+            'off' => ['value' => 0, 'text' => '否', 'color' => 'default'],
+        ];
+    }
 }
