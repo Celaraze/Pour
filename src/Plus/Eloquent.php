@@ -37,7 +37,7 @@ class Eloquent
     static function usernameToName(Model $model, $username, $name)
     {
         try {
-            $model = $model->where('username', $username);
+            $model = $model->where('username', $username)->first();
             if (empty($model)) {
                 return '未知';
             }
