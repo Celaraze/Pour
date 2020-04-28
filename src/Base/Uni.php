@@ -2,6 +2,8 @@
 
 namespace Chemex\Base;
 
+use Exception;
+
 class Uni
 {
     /**
@@ -127,5 +129,27 @@ class Uni
             $result .= rand(0, 9);
         }
         return $result;
+    }
+
+    /**
+     * 通用的接口返回构造数组
+     * @param $code
+     * @param $message
+     * @param $data
+     * @return array
+     */
+    static function returnResult($code, $message, $data)
+    {
+        $return = array();
+        if (!$data instanceof Exception) {
+            $return['code'] = $code;
+            $return['message'] = $message;
+            $return['data'] = $data;
+        } else {
+            $return['code'] = $data->getCode();
+            $return['message'] = $data->getLine() . ':' . $data->getMessage();
+            $return['data'] = [];
+        }
+        return $return;
     }
 }
