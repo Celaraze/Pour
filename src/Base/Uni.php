@@ -133,23 +133,39 @@ class Uni
 
     /**
      * 通用的接口返回构造数组
-     * @param $code
-     * @param $message
-     * @param $data
+     * @param $info
      * @return array
      */
-    static function returnResult($code, $message, $data)
+    static function returnResult($info)
     {
         $return = array();
-        if (!$data instanceof Exception) {
-            $return['code'] = $code;
-            $return['message'] = $message;
-            $return['data'] = $data;
+        if (!$info instanceof Exception) {
+            $return['code'] = $info['code'];
+            $return['message'] = $info['message'];
+            $return['data'] = $info['data'];
         } else {
-            $return['code'] = $data->getCode();
-            $return['message'] = $data->getLine() . ':' . $data->getMessage();
+            $return['code'] = $info->getCode();
+            $return['message'] = $info->getLine() . ':' . $info->getMessage();
             $return['data'] = [];
         }
         return $return;
+    }
+
+    /**
+     * 返回性别选择
+     * @param bool $hasKeys
+     * @return string[]
+     */
+    static function genders($hasKeys = false)
+    {
+        if ($hasKeys) {
+            return [
+                '男' => '男',
+                '女' => '女',
+                '无' => '无'
+            ];
+        } else {
+            return ['男', '女', '无'];
+        }
     }
 }
