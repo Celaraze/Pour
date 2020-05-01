@@ -150,4 +150,18 @@ class Uni
         }
         return $return;
     }
+
+    /**
+     * 返回性别选择
+     * @param bool $hasKeys
+     * @return string[]
+     */
+    static function genders($hasKeys = false)
+    {
+        if ($hasKeys) {
+            return ['男' => '男', '女' => '女', '无' => '无'];
+        } else {
+            return ['男', '女', '无'];
+        }
+    }
 }
