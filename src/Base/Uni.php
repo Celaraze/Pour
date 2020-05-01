@@ -140,32 +140,14 @@ class Uni
     {
         $return = array();
         if (!$info instanceof Exception) {
-            $return['code'] = $info['code'];
-            $return['message'] = $info['message'];
-            $return['data'] = $info['data'];
+            $return['code'] = $info[0];
+            $return['message'] = $info[1];
+            $return['data'] = $info[2];
         } else {
             $return['code'] = $info->getCode();
             $return['message'] = $info->getLine() . ':' . $info->getMessage();
             $return['data'] = [];
         }
         return $return;
-    }
-
-    /**
-     * 返回性别选择
-     * @param bool $hasKeys
-     * @return string[]
-     */
-    static function genders($hasKeys = false)
-    {
-        if ($hasKeys) {
-            return [
-                '男' => '男',
-                '女' => '女',
-                '无' => '无'
-            ];
-        } else {
-            return ['男', '女', '无'];
-        }
     }
 }
