@@ -164,4 +164,24 @@ class Uni
             return ['男', '女', '无'];
         }
     }
+
+    /**
+     * 返回HTTP请求方法
+     * @param bool $hasKeys
+     * @return string[]
+     */
+    static function httpMethods($hasKeys = false)
+    {
+        if ($hasKeys) {
+            return [
+                'GET' => 'GET',
+                'POST' => 'POST',
+                'PUT' => 'PUT',
+                'DELETE' => 'DELETE',
+                'OPTION' => 'OPTION'
+            ];
+        } else {
+            return ['GET', 'POST', 'PUT', 'DELETE', 'OPTION'];
+        }
+    }
 }
