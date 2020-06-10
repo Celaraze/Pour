@@ -201,4 +201,24 @@ class Uni
             return ['是', '否'];
         }
     }
+
+    /**
+     * 返回时间周期
+     * @param $hasKeys
+     * @return string[]
+     */
+    static function dateCycles($hasKeys)
+    {
+        if ($hasKeys) {
+            return [
+                '天' => '天',
+                '周' => '周',
+                '月' => '月',
+                '季' => '季',
+                '年' => '年'
+            ];
+        } else {
+            return ['天', '周', '月', '季', '年'];
+        }
+    }
 }
