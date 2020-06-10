@@ -184,4 +184,21 @@ class Uni
             return ['GET', 'POST', 'PUT', 'DELETE', 'OPTION'];
         }
     }
+
+    /**
+     * 返回是或否
+     * @param bool $hasKeys
+     * @return string[]
+     */
+    static function yesOrNo($hasKeys = false)
+    {
+        if ($hasKeys) {
+            return [
+                '是' => '是',
+                '否' => '否',
+            ];
+        } else {
+            return ['是', '否'];
+        }
+    }
 }
