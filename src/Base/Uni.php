@@ -152,6 +152,26 @@ class Uni
     }
 
     /**
+     * 通用的接口返回构造数组（新版）
+     * @param $code
+     * @param $message
+     * @param $data
+     * @return array
+     */
+    static function rr($code, $message = null, $data = null)
+    {
+        $return = array();
+        $return['code'] = $code;
+        $return['message'] = $message;
+        if ($data instanceof Exception) {
+            $data = $data->getLine() . ':' . $data->getMessage();
+        }
+        $return['data'] = $data;
+
+        return $return;
+    }
+
+    /**
      * 返回性别选择
      * @param bool $hasKeys
      * @return string[]
