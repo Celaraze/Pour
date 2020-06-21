@@ -162,10 +162,11 @@ class Uni
     {
         $return = array();
         $return['code'] = $code;
-        $return['message'] = $message;
-        if ($data instanceof Exception) {
-            $data = $data->getLine() . ':' . $data->getMessage();
+        if ($message instanceof Exception) {
+            $message = $message->getLine() . ':' . $message->getMessage();
+            $data = [];
         }
+        $return['message'] = $message;
         $return['data'] = $data;
 
         return $return;
