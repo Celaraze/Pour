@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Chemex\Plus;
+namespace Pour\Plus;
 
 use Illuminate\Database\Eloquent\Model;
 

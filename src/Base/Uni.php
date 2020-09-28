@@ -1,6 +1,6 @@
 <?php
 
-namespace Chemex\Base;
+namespace Pour\Base;
 
 use Exception;
 

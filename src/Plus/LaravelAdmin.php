@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Chemex\Plus;
+namespace Pour\Plus;
 
 
 class LaravelAdmin

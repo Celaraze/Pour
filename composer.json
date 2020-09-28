@@ -1,5 +1,5 @@
 {
-  "name": "famio/chemex",
+  "name": "famio/pour",
   "description": "Adding more useful libraries to PHP.",
   "type": "library",
   "license": "MIT",
@@ -19,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Chemex\\": "src/"
+      "Pour\\": "src/"
     }
   }
 }
