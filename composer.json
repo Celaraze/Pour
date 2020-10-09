@@ -1,13 +1,13 @@
 {
-  "name": "famio/pour",
+  "name": "celaraze/pour",
   "description": "Adding more useful libraries to PHP.",
   "type": "library",
   "license": "MIT",
   "version": "dev-master",
   "authors": [
     {
-      "name": "famio",
-      "email": "famio@qq.com"
+      "name": "celaraze",
+      "email": "celaraze@qq.com"
     }
   ],
   "require": {
