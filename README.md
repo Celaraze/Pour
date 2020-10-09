@@ -1,4 +1,4 @@
-# Chemex
+# Pour
 
 #### 介绍
 
@@ -6,7 +6,7 @@
 
 #### 安装
 
-```composer require famio/chemex```
+```composer require famio/pour```
 
 #### 说明
 
@@ -45,4 +45,4 @@
 
 #### 开源协议
 
-Chemex 遵循 MIT 开源协议。
+Pour 遵循 MIT 开源协议。
