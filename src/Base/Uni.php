@@ -153,21 +153,21 @@ class Uni
 
     /**
      * 通用的接口返回构造数组（新版）
-     * @param $message
+     * @param $success_message
      * @param $data
      * @param bool $array
      * @return array
      */
-    static function returnJson($message, $data, $array = false)
+    static function returnJson($success_message, $data, $array = false)
     {
         $return = [];
         $return['code'] = 200;
-        if ($message instanceof Exception) {
+        if ($data instanceof Exception) {
             $return['code'] = 500;
-            $message = $message->getLine() . ' : ' . $message->getMessage();
+            $success_message = $data->getLine() . ' : ' . $data->getMessage();
             $data = [];
         }
-        $return['message'] = $message;
+        $return['message'] = $success_message;
         $return['data'] = $data;
 
         if ($array) {
