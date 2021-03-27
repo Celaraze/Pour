@@ -6,7 +6,7 @@
 
 #### 安装
 
-```composer require famio/pour```
+```composer require celaraze/pour```
 
 #### 说明
 
