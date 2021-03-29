@@ -159,7 +159,7 @@ class Uni
      * @param bool $array
      * @return array
      */
-    static function returnJson($code, $message, $data, $array = false)
+    static function returnJson($code, $message, $data = [], $array = false)
     {
         $return = [];
         $return['code'] = $code;
