@@ -208,4 +208,14 @@ class Uni
             return ['天', '周', '月', '季', '年'];
         }
     }
+
+    /**
+     * 状态是否禁用.
+     *
+     * @return string[] 0是正常，1是禁用
+     */
+    static function disabled(): array
+    {
+        return ['正常', '禁用'];
+    }
 }
