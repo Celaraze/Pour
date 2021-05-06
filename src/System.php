@@ -1,16 +1,17 @@
 <?php
 
 
-namespace Pour\Base;
+namespace Pour;
 
 
-class SystemInfo
+class System
 {
     /**
-     * 查看CPU使用率 Linux
-     * @return string
+     * 查看CPU使用率 Linux.
+     *
+     * @return string CPU使用率
      */
-    static function getUsageOfLinuxCPU()
+    static function getUsageOfLinuxCPU(): string
     {
         $step1 = self::getLinuxCPU();
         sleep(1);
@@ -23,10 +24,11 @@ class SystemInfo
     }
 
     /**
-     * 查看CPU当前时刻的状态 Linux
-     * @return mixed
+     * 查看CPU当前时刻的状态 Linux.
+     *
+     * @return array 状态
      */
-    static function getLinuxCPU()
+    static function getLinuxCPU(): array
     {
         $mode = "/(cpu)[\s]+([0-9]+)[\s]+([0-9]+)[\s]+([0-9]+)[\s]+([0-9]+)[\s]+([0-9]+)[\s]+([0-9]+)[\s]+([0-9]+)[\s]+([0-9]+)/";
         $string = shell_exec("more /proc/stat");
@@ -39,16 +41,16 @@ class SystemInfo
     }
 
     /**
-     * 查看内存使用率 Linux
-     * @return string
+     * 查看内存使用率 Linux.
+     *
+     * @return int|string 使用率
      */
-    static function getUsageOfLinuxMemory()
+    static function getUsageOfLinuxMemory(): int|string
     {
         $str = shell_exec("more /proc/meminfo");
         $mode = "/(.+):\s*([0-9]+)/";
         preg_match_all($mode, $str, $arr);
         $usage = bcdiv($arr[2][1], $arr[2][0], 3);
-        $usage = 1 - $usage;
-        return $usage;
+        return 1 - $usage;
     }
 }

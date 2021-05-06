@@ -11,11 +11,12 @@
     }
   ],
   "require": {
-    "php": "^7.3|^8",
+    "php": "^8",
     "ext-mbstring": "*",
     "ext-json": "*",
     "ext-bcmath": "*",
-    "ext-openssl": "*"
+    "ext-openssl": "*",
+    "nesbot/carbon": "^2.47"
   },
   "autoload": {
     "psr-4": {
